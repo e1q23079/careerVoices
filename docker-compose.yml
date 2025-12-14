@@ -1,0 +1,8 @@
+services:
+  career_voices_web:
+    build: .
+    container_name: career_voices_web
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
