@@ -6,7 +6,7 @@ RUN mkdir /app
 # Upgrade pip to the latest version
 RUN pip install --upgrade pip
 # Copy the requirements file into the container
-COPY ../requirements.txt /app/
+COPY requirements.txt /app/
 # Install the required Python packages
 RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code into the container
