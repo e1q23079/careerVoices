@@ -1,6 +1,8 @@
 services:
   career_voices_web:
-    build: .
+    build:
+      context: ./app
+      dockerfile: Dockerfile
     container_name: career_voices_web
     ports:
       - "8000:8000"
