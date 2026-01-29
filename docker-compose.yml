@@ -1,10 +1,19 @@
 services:
-  career_voices_web:
+  nginx:
+      build: .
+      container_name: nginx_career_voices_web
+      volumes:
+        - static_volume:/static
+      ports:
+        - "8080:8080"
+  web:
     build:
       context: ./app
       dockerfile: Dockerfile
     container_name: career_voices_web
-    ports:
-      - "8000:8000"
+    volumes:
+      - static_volume:/static
     env_file:
       - ./app/.env
+volumes:
+  static_volume:
