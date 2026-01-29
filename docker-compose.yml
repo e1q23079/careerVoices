@@ -12,7 +12,7 @@ services:
       dockerfile: Dockerfile
     container_name: career_voices_web
     volumes:
-      - static_volume:/static
+      - static_volume:/app/static
     env_file:
       - ./app/.env
 volumes:

@@ -11,4 +11,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code into the container
 COPY . /app/
 # Define the command to run the application
+RUN python3 manage.py collectstatic --noinput
 CMD ["gunicorn", "--workers","3","app.wsgi:application", "--bind", "0.0.0.0:8000"]
