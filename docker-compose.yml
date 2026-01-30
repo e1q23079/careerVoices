@@ -13,6 +13,7 @@ services:
     container_name: career_voices_web
     volumes:
       - static_volume:/app/static
+      - ./app/db:/app/db
     env_file:
       - ./app/.env
 volumes:
