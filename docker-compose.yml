@@ -1,11 +1,11 @@
 services:
   nginx:
-      build: .
-      container_name: nginx_career_voices_web
-      volumes:
-        - static_volume:/static
-      ports:
-        - "8080:8080"
+    build: .
+    container_name: nginx_career_voices_web
+    volumes:
+      - static_volume:/static
+    ports:
+      - "8080:8080"
   web:
     build:
       context: ./app
